@@ -161,7 +161,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
     Widget internalWidget;
     if (widget.builder != null) {
       internalWidget = InkWell(
-        onTap: showCountryCodePickerDialog,
+        onTap: widget.enabled ? showCountryCodePickerDialog : null,
         child: widget.builder!(selectedItem),
       );
     } else {
